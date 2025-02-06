@@ -1,0 +1,110 @@
+def jackson = '2.18.1'
+def log4j = '2.24.2'
+def log4jAws = '3.2.1'
+def hibernate = '6.6.3.Final'
+def hibernateValidator = '8.0.1.Final'
+def spring = '6.2.1'
+def springData = '3.4.1'
+def springCrypto = '6.4.1'
+def guava = '33.3.1-jre'
+def mysqlJava = '8.0.33'
+def rxJava = '3.1.9'
+def slf4j = '2.0.16'
+def disruptor = '4.0.0'
+def jedis = '5.2.0'
+def commonsText = '1.12.0'
+def commonsValidator = '1.9.0'
+def hikariCP = '6.2.1'
+def snakeYaml = '2.3'
+def aspectJ = '1.9.22.1'
+def firebase = '9.4.1'
+def caffeine = '3.1.8'
+def apachePoi = '5.3.0'
+def tika = '3.0.0'
+def bouncyCastle = '1.79'
+def servetApi = '6.1.0'
+def persistenceApi = '3.1.0' // 3.2.0 cannot compile
+def commonsNet = '3.11.1'
+def jose4j = '0.9.6'
+def jaxbApi = '2.3.1'
+def jaxbCore = '3.0.0'
+def aws = '2.29.30'
+
+ext {
+    LIBS = [
+            "javax.xml.bind:jaxb-api:$jaxbApi",
+            "com.sun.xml.bind:jaxb-core:$jaxbCore",
+
+            "com.google.guava:guava:$guava",
+
+            "mysql:mysql-connector-java:$mysqlJava",
+
+            "io.reactivex.rxjava3:rxjava:$rxJava",
+
+            "org.yaml:snakeyaml:$snakeYaml",
+
+            "org.apache.logging.log4j:log4j-api:$log4j",
+            "org.apache.logging.log4j:log4j-core:$log4j",
+            "org.apache.logging.log4j:log4j-web:$log4j",
+            "org.apache.logging.log4j:log4j-1.2-api:$log4j",
+            "org.apache.logging.log4j:log4j-slf4j2-impl:$log4j",
+            "org.slf4j:jcl-over-slf4j:$slf4j",
+            "org.slf4j:jul-to-slf4j:$slf4j",
+            "com.lmax:disruptor:$disruptor",
+
+            "com.kdgregory.logging:log4j2-aws-appenders:$log4jAws",
+            "com.kdgregory.logging:aws-facade-v2:$log4jAws",
+
+            "software.amazon.awssdk:cloudwatchlogs:$aws",
+            "software.amazon.awssdk:ses:$aws",
+            "software.amazon.awssdk:s3:$aws",
+            "software.amazon.awssdk:sqs:$aws",
+            "software.amazon.awssdk:cloudfront:$aws",
+            "software.amazon.awssdk:elasticbeanstalk:$aws",
+
+            "org.aspectj:aspectjrt:$aspectJ",
+            "org.aspectj:aspectjweaver:$aspectJ",
+            "org.springframework.data:spring-data-redis:$springData",
+            "org.springframework.data:spring-data-jpa:$springData",
+            "org.springframework.data:spring-data-commons:$springData",
+            "org.springframework:spring-core:$spring",
+            "org.springframework:spring-web:$spring",
+            "org.springframework:spring-webmvc:$spring",
+            "org.springframework:spring-orm:$spring",
+            "org.springframework:spring-aop:$spring",
+            "org.springframework.security:spring-security-crypto:$springCrypto",
+
+            "redis.clients:jedis:$jedis",
+
+            "org.hibernate:hibernate-core:$hibernate",
+            "org.hibernate:hibernate-spatial:$hibernate",
+            "org.hibernate.validator:hibernate-validator-annotation-processor:$hibernateValidator",
+
+            "com.fasterxml.jackson.core:jackson-core:$jackson",
+            "com.fasterxml.jackson.core:jackson-annotations:$jackson",
+            "com.fasterxml.jackson.core:jackson-databind:$jackson",
+            "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:$jackson",
+            "com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:$jackson",
+            "com.fasterxml.jackson.datatype:jackson-datatype-guava:$jackson",
+            "com.fasterxml.jackson.datatype:jackson-datatype-jdk8:$jackson",
+
+            "org.apache.commons:commons-text:$commonsText",
+            "commons-validator:commons-validator:$commonsValidator",
+            "commons-net:commons-net:$commonsNet",
+            "org.apache.poi:poi:$apachePoi",
+            "org.apache.poi:poi-ooxml:$apachePoi",
+
+            "com.zaxxer:HikariCP:$hikariCP",
+
+            "com.google.firebase:firebase-admin:$firebase",
+            "com.github.ben-manes.caffeine:caffeine:$caffeine",
+
+            "org.apache.tika:tika-core:$tika",
+            "org.bouncycastle:bcprov-jdk18on:$bouncyCastle",
+
+            "jakarta.servlet:jakarta.servlet-api:$servetApi",
+            "jakarta.persistence:jakarta.persistence-api:$persistenceApi",
+
+            "org.bitbucket.b_c:jose4j:$jose4j"
+    ]
+}

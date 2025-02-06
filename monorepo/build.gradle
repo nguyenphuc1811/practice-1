@@ -1,0 +1,37 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+}
+
+
+allprojects {
+    group 'vn.monorepo'
+    version version
+
+    apply plugin: 'java'
+    apply plugin: 'idea'
+
+    compileJava {
+        options.encoding = "UTF-8"
+    }
+
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+
+    tasks.withType(JavaCompile) {
+        sourceCompatibility = '21'
+        targetCompatibility = '21'
+        options.compilerArgs.add("-parameters")
+    }
+
+    configurations {
+        all*.exclude module: 'spring-boot-starter-logging'
+    }
+
+    processResources {
+        duplicatesStrategy = DuplicatesStrategy.INCLUDE
+    }
+}
