@@ -1,4 +1,5 @@
 rootProject.name = 'monorepo'
 include 'server'
 include 'ext'
+include 'actor'
 
