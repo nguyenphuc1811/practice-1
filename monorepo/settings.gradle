@@ -3,4 +3,5 @@ include 'server'
 include 'ext'
 include 'actor'
 include 'product'
+include 'test'
 
